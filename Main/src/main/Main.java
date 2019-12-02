@@ -5,9 +5,6 @@
  */
 package main;
 
-
- * @author fox
- */
 public class Main {
 
     /**
