@@ -1,4 +1,7 @@
 package main;
+
+import java.util.Scanner;
+
 public class Ator {
     String nome;
     int idade;
@@ -8,9 +11,10 @@ public class Ator {
     String premios;
     String participacoes;
     boolean ocupado;
-
+    
     public String getNome() {
         return nome;
+    
     }
 
     public void setNome(String nome) {
@@ -85,7 +89,7 @@ public class Ator {
     void designar(){
         if (this.ocupado == true){
             System.out.println("O ator já está designado para outra peça.");
-        } else cursopoo{
+        } else  {
             System.out.println("Para que peça quer designar o(a) ator/atriz?");
             //Listar peças e abrir input
             System.out.println("Ator " + this.nome + " foi designado para a peça " /*+ peça*/);
@@ -108,7 +112,47 @@ public class Ator {
         
     }
     
-    public void criar(){
+    public void inserirator(){
         
+        int idade;
+        String nome,genero,nacionalidade,formacao,premios,participacoes;
+        Scanner teclado = new Scanner(System.in);//Input
+        
+        System.out.println("Insira o Nome: ");
+        nome=teclado.nextLine();
+        
+        setNome(nome);
+       
+        boolean funcionar=false;
+        do{
+            System.out.println("Inisira a Idade: ");
+            if(teclado.hasNextInt()){
+                idade=teclado.nextInt();
+                funcionar=true;
+                setIdade(idade);
+            }else{
+            System.out.println("Idade Invalida");
+            }
+        }while(funcionar!=true);
+        
+        System.out.println("Insira o Género: ");
+        genero=teclado.nextLine();
+        setGenero(genero);
+        
+        System.out.println("Insira a Nacionalidade: ");
+        nacionalidade=teclado.nextLine();
+        setNacionalidade(nacionalidade);
+        
+        System.out.println("Insira a Formação");
+        formacao=teclado.nextLine();
+        setFormacao(formacao);
+        
+        System.out.println("Insira os Prémios");
+        premios=teclado.nextLine();
+        setPremios(premios);
+        
+        System.out.println("Insira as Participações");
+        participacoes=teclado.nextLine();
+        setParticipacoes(participacoes);       
     }
 }
