@@ -1,10 +1,11 @@
 package main;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner; //Scanner Class
 
 public class Main {
     
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, IOException {
         int opcao;
         Scanner teclado = new Scanner(System.in); //Input
         
@@ -35,6 +36,7 @@ public class Main {
 
                 case 2:
                     System.out.println("Editar");
+                    Editar.menuEditar();
                     break;
 
                 case 3:
