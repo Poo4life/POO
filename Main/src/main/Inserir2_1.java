@@ -169,7 +169,7 @@ public class Inserir2_1 {
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
-            out.println(a+";"+idade+";"+b+";"+c+";"+d+";"+e+";"+f);             
+            out.println(a+"|"+idade+"|"+b+"|"+c+"|"+d+"|"+e+"|"+f);             
          } catch (IOException g){
              System.out.println("erro");
          }
