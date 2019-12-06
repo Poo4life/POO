@@ -77,7 +77,7 @@ public class Ator {
         this.ocupado = ocupado;
     }
    
-    void status(){
+    public  void status(){
         System.out.println("Ator/Atriz: " + this.nome);
         if (this.ocupado == true){
             System.out.println(this.nome + " encontra-se ocupado(a).");

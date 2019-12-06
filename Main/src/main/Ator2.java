@@ -1,5 +1,5 @@
-package Teatro;
-public class Ator {
+package main;
+public class Ator2 {
     String nome;
     int idade;
     String genero;

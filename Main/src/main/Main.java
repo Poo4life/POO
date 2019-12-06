@@ -1,9 +1,10 @@
 package main;
+import java.io.FileNotFoundException;
 import java.util.Scanner; //Scanner Class
 
 public class Main {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         int opcao;
         Scanner teclado = new Scanner(System.in); //Input
         
@@ -29,7 +30,7 @@ public class Main {
                     
                 case 1:
                     System.out.println("Inserir Dados"); //Estes souts são só exemplos, foi para testar, aqui depois se calhar entra uma função só para inserir.
-                    inserir.printmenu();
+                    Inserir2.menu();
                     break;
 
                 case 2:
