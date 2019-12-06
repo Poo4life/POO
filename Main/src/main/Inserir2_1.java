@@ -53,7 +53,7 @@ public class Inserir2_1 {
         String a,b,c,d,e,f;
         Ator ator = new Ator(); 
     
-        System.out.println("Qual o nome?"); //Inserir nome do ator
+        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
         a = teclado.nextLine();       
         ator.setNome(a);               
          
