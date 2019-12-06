@@ -114,6 +114,7 @@ public class Inserir2_1 {
         
         if (d.equals(null) || d.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
             ator.setFormacao(nd);
+            d = nd;
         }else{
             ator.setFormacao(d); //Senão ficará o input
         }/*
@@ -131,6 +132,7 @@ public class Inserir2_1 {
                 
         if (e.equals(null) || e.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
             ator.setPremios(nd);
+            e = nd;
         }else{
             ator.setPremios(e); //Senão ficará o input
         }/*
@@ -148,6 +150,7 @@ public class Inserir2_1 {
                 
         if (f.equals(null) || f.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
             ator.setParticipacoes("Não definido");
+            f = nd;
         }else{
             ator.setParticipacoes(f); //Senão ficará o input
         }
@@ -166,7 +169,7 @@ public class Inserir2_1 {
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
-            out.println(a+","+idade+","+b+","+c+","+d+","+e+","+f);             
+            out.println(a+";"+idade+";"+b+";"+c+";"+d+";"+e+";"+f);             
          } catch (IOException g){
              System.out.println("erro");
          }
