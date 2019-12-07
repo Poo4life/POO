@@ -6,7 +6,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.Writer;
 import java.io.PrintWriter;
-import java.io.BufferedWriter;
+import java.io.BufferedWriter;  
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
@@ -32,7 +32,6 @@ public class Inserir2_1 {
         System.out.println("Insira a opção pretendida.");
         
         opcao=teclado.nextInt();
-        //Ator ator = new Ator É preciso este aqui?
         
         switch (opcao) {
             case 1:
@@ -345,7 +344,7 @@ public class Inserir2_1 {
          } catch (IOException g){
              System.out.println("erro");
          }
-        System.out.println("Este é o Drmaturgo final:");
+        System.out.println("Este é o Dramaturgo final:");
         dramaturgo.status(); //Print do dramaturgo  final
     }
        
@@ -421,6 +420,8 @@ public class Inserir2_1 {
         System.out.println("Este é o ator final:");
         figurante.status(); //Print do figurante  final
     }
+         
+         
   
 }
 
