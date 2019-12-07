@@ -23,7 +23,7 @@ public class Main {
             System.out.println("0 - Sair");
             System.out.println("-----------------");
             System.out.println("");
-            System.out.print("Introduza a opção pretendida.");
+            System.out.print("Introduza a opção pretendida: ");
             
             opcao= teclado.nextInt();
             

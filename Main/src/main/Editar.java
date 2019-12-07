@@ -26,12 +26,13 @@ public class Editar {
         System.out.println("3 - Cenógrafo(a)");
         System.out.println("4 - Dramaturgo(a)");
         System.out.println("5 - Figurante");
-        System.out.println("6 - Iluminador(a)");
-        System.out.println("7 - Ponto");
-        System.out.println("8 - Produtor(a)");
-        System.out.println("9 - Peça");
+        System.out.println("6 - Figurista");
+        System.out.println("7 - Iluminador(a)");
+        System.out.println("8 - Ponto");
+        System.out.println("9 - Produtor(a)");
+        System.out.println("10 - Peça");
         System.out.println("---------------------");
-        System.out.println("Insira a opção pretendida.");
+        System.out.print("Insira a opção pretendida: ");
         
         opcao=teclado.nextInt();
         
