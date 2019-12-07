@@ -109,15 +109,5 @@ public class Ator2 {
             this.ocupado = false;
         }
     }
-    public void apagar(){
-        
-    }
-    
-    public void editar(){
-        
-    }
-    
-    public void criar(){
-        
-    }
+  
 }
