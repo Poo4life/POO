@@ -52,16 +52,19 @@ public class Editar {
             case 5 :
                 editarFigurante();
                 break;
-            case 6 : 
+            case 6:
+                editarFigurista();
+                break;
+            case 7 : 
                 editarIluminador();
                 break;
-            case 7 :
+            case 8 :
                 editarPonto();
                 break;
-            case 8 :
+            case 9 :
                 editarProdutor();
                 break;
-            case 9 : 
+            case 10 : 
                 editarPeça();
                 break;
             default:
@@ -84,28 +87,28 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do(a) ator/atriz que quer fazer mudanças aos dados: ");
+        System.out.print("Introduza o nome do(a) ator/atriz que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
-        System.out.println("Introduza o novo Nome: ");
+        System.out.print("Introduza o novo Nome: ");
         String newnome =teclado.nextLine();
         
-        System.out.println("Introduza a nova Idade: ");
+        System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.println("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.println("Introduza o Genero: ");
+        System.out.print("Introduza o Genero: ");
         String newgen=teclado.nextLine();
     
-        System.out.println("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações ");
         String newhab=teclado.nextLine();
     
-        System.out.println("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios ");
         String newprem=teclado.nextLine();
     
-        System.out.println("Introduza as Participações:  ");
+        System.out.print("Introduza as Participações:  ");
         String newpart =teclado.nextLine();
     
     
@@ -171,28 +174,28 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do(a) diretor(a) que quer fazer mudanças aos dados: ");
+        System.out.print("Introduza o nome do(a) diretor(a) que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
-        System.out.println("Introduza o novo Nome: ");
+        System.out.print("Introduza o novo Nome: ");
         String newnome =teclado.nextLine();
         
-        System.out.println("Introduza a nova Idade: ");
+        System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.println("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.println("Introduza o Genero: ");
+        System.out.print("Introduza o Genero: ");
         String newgen=teclado.nextLine();
     
-        System.out.println("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações ");
         String newhab=teclado.nextLine();
     
-        System.out.println("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios ");
         String newprem=teclado.nextLine();
     
-        System.out.println("Introduza as Participações:  ");
+        System.out.print("Introduza as Participações:  ");
         String newpart =teclado.nextLine();
     
     
@@ -259,28 +262,28 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do Cénografo que quer fazer mudanças aos dados: ");
+        System.out.print("Introduza o nome do Cénografo que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
-        System.out.println("Introduza o novo Nome: ");
+        System.out.print("Introduza o novo Nome: ");
         String newnome =teclado.nextLine();
         
-        System.out.println("Introduza a nova Idade: ");
+        System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.println("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.println("Introduza o Genero: ");
+        System.out.print("Introduza o Genero: ");
         String newgen=teclado.nextLine();
     
-        System.out.println("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações ");
         String newhab=teclado.nextLine();
     
-        System.out.println("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios ");
         String newprem=teclado.nextLine();
     
-        System.out.println("Introduza as Participações:  ");
+        System.out.print("Introduza as Participações:  ");
         String newpart =teclado.nextLine();
     
     
@@ -347,28 +350,28 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do Dramaturgo que quer fazer mudanças aos dados: ");
+        System.out.print("Introduza o nome do Dramaturgo que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
-        System.out.println("Introduza o novo Nome: ");
+        System.out.print("Introduza o novo Nome: ");
         String newnome =teclado.nextLine();
         
-        System.out.println("Introduza a nova Idade: ");
+        System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.println("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.println("Introduza o Genero: ");
+        System.out.print("Introduza o Genero: ");
         String newgen=teclado.nextLine();
     
-        System.out.println("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações ");
         String newhab=teclado.nextLine();
     
-        System.out.println("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios ");
         String newprem=teclado.nextLine();
     
-        System.out.println("Introduza as Participações:  ");
+        System.out.print("Introduza as Participações:  ");
         String newpart =teclado.nextLine();
     
     
@@ -435,28 +438,28 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do Figurante que quer fazer mudanças aos dados: ");
+        System.out.print("Introduza o nome do Figurante que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
-        System.out.println("Introduza o novo Nome: ");
+        System.out.print("Introduza o novo Nome: ");
         String newnome =teclado.nextLine();
         
-        System.out.println("Introduza a nova Idade: ");
+        System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.println("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.println("Introduza o Genero: ");
+        System.out.print("Introduza o Genero: ");
         String newgen=teclado.nextLine();
     
-        System.out.println("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações ");
         String newhab=teclado.nextLine();
     
-        System.out.println("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios ");
         String newprem=teclado.nextLine();
     
-        System.out.println("Introduza as Participações:  ");
+        System.out.print("Introduza as Participações:  ");
         String newpart =teclado.nextLine();
     
     
@@ -511,6 +514,95 @@ public class Editar {
     
     }
     
+    public static void editarFigurista() throws FileNotFoundException, IOException {
+            
+             Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("Estes são os Figuristas da Companhia neste momento: ");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("figuristas.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        
+        System.out.print("Introduza o nome do Figurista que quer fazer mudanças aos dados: ");
+        String chave = teclado.nextLine();
+        
+        System.out.print("Introduza o novo Nome: ");
+        String newnome =teclado.nextLine();
+        
+        System.out.print("Introduza a nova Idade: ");
+        String newidade =teclado.nextLine();
+        
+        System.out.print("Introduza a nova nacionalidade: ");
+        String newnac =teclado.nextLine();
+    
+        System.out.print("Introduza o Genero: ");
+        String newgen=teclado.nextLine();
+    
+        System.out.print("Introduza as Habilitações ");
+        String newhab=teclado.nextLine();
+    
+        System.out.print("Introduza os Prémios ");
+        String newprem=teclado.nextLine();
+    
+        System.out.print("Introduza as Participações:  ");
+        String newpart =teclado.nextLine();
+    
+    
+        String tempfile="temp.txt";
+        File oldFile = new File("figuristas.txt");
+        File newFile = new File(tempfile);
+        
+        String nome="";
+        String idade="";
+        String nac="";
+        String gen="";
+        String hab="";
+        String prem="";
+        String part="";
+        
+        
+        try{
+            FileWriter fw = new FileWriter(tempfile, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            x = new Scanner( new File ("figuristas.txt"));
+            x.useDelimiter("[|\n]");
+        
+            while(x.hasNext()){
+                
+                nome=x.next();
+                idade=x.next();
+                nac=x.next();
+                gen=x.next();
+                hab=x.next();
+                prem=x.next();
+                part=x.next();
+                
+                if(nome.equals(chave)){
+                    
+                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newgen+"|"+newhab+"|"+newprem+"|"+newpart);
+                }else{
+                    pw.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+hab+"|"+prem+"|"+part);
+                }
+            }
+            
+            x.close();
+            pw.flush();
+            pw.close();
+            oldFile.delete();
+            File lixo = new File ("figuristas.txt");
+            newFile.renameTo(lixo);
+        }
+        catch(Exception e){
+            System.out.println("Error");
+        }
+    
+    }
+    
     public static void editarIluminador() throws FileNotFoundException, IOException{
         
         Scanner teclado = new Scanner(System.in);
@@ -524,28 +616,28 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do Iluminador que quer fazer mudanças aos dados: ");
+        System.out.print("Introduza o nome do Iluminador que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
-        System.out.println("Introduza o novo Nome: ");
+        System.out.print("Introduza o novo Nome: ");
         String newnome =teclado.nextLine();
         
-        System.out.println("Introduza a nova Idade: ");
+        System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.println("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.println("Introduza o Genero: ");
+        System.out.print("Introduza o Genero: ");
         String newgen=teclado.nextLine();
     
-        System.out.println("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações ");
         String newhab=teclado.nextLine();
     
-        System.out.println("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios ");
         String newprem=teclado.nextLine();
     
-        System.out.println("Introduza as Participações:  ");
+        System.out.print("Introduza as Participações:  ");
         String newpart =teclado.nextLine();
     
     
@@ -614,28 +706,28 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do Ponto que quer fazer mudanças aos dados: ");
+        System.out.print("Introduza o nome do Ponto que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
-        System.out.println("Introduza o novo Nome: ");
+        System.out.print("Introduza o novo Nome: ");
         String newnome =teclado.nextLine();
         
-        System.out.println("Introduza a nova Idade: ");
+        System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.println("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.println("Introduza o Genero: ");
+        System.out.print("Introduza o Genero: ");
         String newgen=teclado.nextLine();
     
-        System.out.println("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações ");
         String newhab=teclado.nextLine();
     
-        System.out.println("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios ");
         String newprem=teclado.nextLine();
     
-        System.out.println("Introduza as Participações:  ");
+        System.out.print("Introduza as Participações:  ");
         String newpart =teclado.nextLine();
     
     
@@ -704,28 +796,28 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do Produtor que quer fazer mudanças aos dados: ");
+        System.out.print("Introduza o nome do Produtor que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
-        System.out.println("Introduza o novo Nome: ");
+        System.out.print("Introduza o novo Nome: ");
         String newnome =teclado.nextLine();
         
-        System.out.println("Introduza a nova Idade: ");
+        System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.println("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.println("Introduza o Genero: ");
+        System.out.print("Introduza o Genero: ");
         String newgen=teclado.nextLine();
     
-        System.out.println("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações ");
         String newhab=teclado.nextLine();
     
-        System.out.println("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios ");
         String newprem=teclado.nextLine();
     
-        System.out.println("Introduza as Participações:  ");
+        System.out.print("Introduza as Participações:  ");
         String newpart =teclado.nextLine();
     
     
@@ -794,22 +886,22 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome da Peça que quer fazer mudanças aos dados: ");
+        System.out.print("Introduza o nome da Peça que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
-        System.out.println("Introduza o Nome: ");
+        System.out.print("Introduza o Nome: ");
         String newnome=teclado.nextLine();
         
-        System.out.println("Introduza o Dia: ");
+        System.out.print("Introduza o Dia: ");
         String newdia =teclado.nextLine();
         
-        System.out.println("Introduza o Mês: ");
+        System.out.print("Introduza o Mês: ");
         String newmes =teclado.nextLine();
         
-        System.out.println("Introduza o Ano: ");
+        System.out.print("Introduza o Ano: ");
         String newano =teclado.nextLine();
         
-        System.out.println("Introduza o Local : ");
+        System.out.print("Introduza o Local : ");
         String newlocal=teclado.nextLine();
         
         String tempfile="temp.txt";
