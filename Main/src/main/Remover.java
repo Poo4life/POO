@@ -24,12 +24,13 @@ public class Remover {
         System.out.println("3 - Cenógrafo(a)");
         System.out.println("4 - Dramaturgo(a)");
         System.out.println("5 - Figurante");
-        System.out.println("6 - Iluminador(a)");
-        System.out.println("7 - Ponto");
-        System.out.println("8 - Produtor(a)");
-        System.out.println("9 - Peça");
+        System.out.println("6 - Figurista");
+        System.out.println("7 - Iluminador(a)");
+        System.out.println("8 - Ponto");
+        System.out.println("9 - Produtor(a)");
+        System.out.println("10 - Peça");
         System.out.println("---------------------");
-        System.out.println("Insira a opção pretendida.");
+        System.out.print("Insira a opção pretendida: ");
         
         opcao=teclado.nextInt();
         
@@ -50,15 +51,18 @@ public class Remover {
                 removerFigurante();
                 break;
             case 6 :
-                removerIluminador();
+                removerFigurista();
                 break;
             case 7 :
-                removerPonto();
+                removerIluminador();
                 break;
             case 8 :
+                removerPonto();
+                break;
+            case 9 :
                 removerProdutor();
                 break;
-            case 9 : 
+            case 10 : 
                 removerPeça();
                 break;
             default:
@@ -317,6 +321,56 @@ public class Remover {
         }
     }
 
+    public static void removerFigurista() throws IOException{
+        
+        System.out.println("Estes são os Figuristas da Companhia neste momento: ");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("Figuristas.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        Scanner teclado = new Scanner (System.in);
+        
+        //Teste se o ficheiro existe
+        File inputFile = new File("Figuristas.txt");
+        if (!inputFile.isFile()){
+            System.out.println("Não existem figuristas criados.");
+        }
+        
+        //Criação dum ficheiro temporário
+        File tempFile = new File(inputFile.getAbsolutePath() + ".tmp");
+        BufferedReader br = new BufferedReader(new FileReader("Figuristas.txt"));
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+        String linha;
+        String nome;
+        
+        System.out.println("Qual o nome (completo) do figurista que quer apagar?");
+        nome = teclado.nextLine();
+
+        
+        //Ler até encontrar a linha
+        while ((linha = br.readLine()) != null){
+            if (!linha.startsWith(nome)){
+                pw.println(linha);
+                pw.flush();
+            }
+            
+        }
+        
+        pw.close();
+        br.close();
+        
+        if (!inputFile.delete()){
+            System.out.println("Não foi possível remover o ficheiro antigo.");
+        }
+        
+        if (!tempFile.renameTo(inputFile)){
+            System.out.println("Não foi possível editar o ficheiro.");
+        }
+    }
+    
     public static void removerIluminador() throws IOException {
 
           System.out.println("Estes são os Imuninadores da Companhia neste momento: ");
