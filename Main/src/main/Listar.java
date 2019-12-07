@@ -30,9 +30,9 @@ public class Listar {
         System.out.println("4 - Dramaturgo(a)");
         System.out.println("5 - Figurante");
         System.out.println("6 - Iluminador(a)");
-        System.out.println("7 - Ponto");
+        /*System.out.println("7 - Ponto");
         System.out.println("8 - Produtor(a)");
-        //System.out.println("9 - Peça");
+        //System.out.println("9 - Peça");*/
         System.out.println("---------------------");
         System.out.println("Insira a opção pretendida.");
         
@@ -69,7 +69,7 @@ public class Listar {
         
     }
 
-    private static void listarAtor() throws FileNotFoundException, IOException {
+    public static void listarAtor() throws FileNotFoundException, IOException {
 
         System.out.println("Estes são os Atores da Companhia neste momento: ");
         
@@ -82,7 +82,7 @@ public class Listar {
 
     }
 
-    private static void listarDiretor() throws FileNotFoundException, IOException {
+    public static void listarDiretor() throws FileNotFoundException, IOException {
         
         System.out.println("Estes são os Diretores da Companhia neste momento: ");
         
@@ -94,7 +94,7 @@ public class Listar {
         }
     }
 
-    private static void listarCenografo() throws FileNotFoundException, IOException {
+    public static void listarCenografo() throws FileNotFoundException, IOException {
         
         System.out.println("Estes são os Cenógrafos da Companhia neste momento: ");
         
@@ -106,7 +106,7 @@ public class Listar {
         }
     }
 
-    private static void listarDramaturgo() throws FileNotFoundException, IOException {
+    public static void listarDramaturgo() throws FileNotFoundException, IOException {
 
          System.out.println("Estes são os Dramaturgos da Companhia neste momento: ");
         
@@ -118,7 +118,7 @@ public class Listar {
         }
     }
 
-    private static void listarFigurante() throws FileNotFoundException, IOException {
+    public static void listarFigurante() throws FileNotFoundException, IOException {
         
         System.out.println("Estes são os Figurantes da Companhia neste momento: ");
         
@@ -130,7 +130,7 @@ public class Listar {
         }
     }
 
-    private static void listarIluminador() throws FileNotFoundException, IOException {
+    public static void listarIluminador() throws FileNotFoundException, IOException {
         
         System.out.println("Estes são os Iluminador da Companhia neste momento: ");
         

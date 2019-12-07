@@ -12,7 +12,7 @@ import java.io.OutputStreamWriter;
 
 public class Inserir {
     
-     static void menu() throws FileNotFoundException { //Menu inserir
+    public static void menu() throws FileNotFoundException { //Menu inserir
         int opcao;
         Scanner teclado = new Scanner (System.in);
         
@@ -27,7 +27,7 @@ public class Inserir {
         System.out.println("6 - Iluminador(a)");
         System.out.println("7 - Ponto");
         System.out.println("8 - Produtor(a)");
-        //System.out.println("9 - Peça");
+        System.out.println("9 - Peça");
         System.out.println("---------------------");
         System.out.println("Insira a opção pretendida.");
         
@@ -58,13 +58,15 @@ public class Inserir {
             case 8:
                 inserirProdutor();
                 break;
+            case 9 : 
+                inserirPeça();
             default:    
                 throw new AssertionError();
         }
         
     }
      
-    static void inserirAtor() throws FileNotFoundException{    
+    public static void inserirAtor() throws FileNotFoundException{    
         
         Scanner teclado = new Scanner (System.in);    
 
@@ -137,8 +139,7 @@ public class Inserir {
                 
     }    
 
-
-      public static void inserirDiretor() throws FileNotFoundException{    
+    public static void inserirDiretor() throws FileNotFoundException{    
         
         Scanner teclado = new Scanner (System.in);    
 
@@ -212,7 +213,7 @@ public class Inserir {
                 
     }    
 
-       private static void inserirCenografo() {
+    public static void inserirCenografo() {
      
         Scanner teclado = new Scanner (System.in);    
         
@@ -285,7 +286,8 @@ public class Inserir {
         cenografo.status(); //Print do Cenógrafo final
                 
     }
-       public static void inserirDramaturgo() throws FileNotFoundException{    
+    
+    public static void inserirDramaturgo() throws FileNotFoundException{    
         
         Scanner teclado = new Scanner (System.in);    
 
@@ -430,8 +432,7 @@ public class Inserir {
         System.out.println("Este é o figurante final:");
         figurante.status(); //Print do figurante  final
     }
-         
-    
+             
     public static void inserirIluminador() throws FileNotFoundException{    
         
         Scanner teclado = new Scanner (System.in);    
@@ -647,8 +648,8 @@ public class Inserir {
          } catch (IOException g){
              System.out.println("erro");
          }
-        System.out.println("Este é o figurante final:");
-        produtor.status(); //Print do figurante  final
+        System.out.println("Este é o Produtor final:");
+        produtor.status(); //Print do produtor  final
     }
     
     public static void inserirPeça() throws FileNotFoundException{    
@@ -692,7 +693,7 @@ public class Inserir {
              System.out.println("erro");
          }
         System.out.println("Esta é a peça final:");
-        peça.status(); //Print do figurante  final
+        peça.status(); //Print do peça  final
         
         
     }

@@ -27,9 +27,9 @@ public class Editar {
         System.out.println("4 - Dramaturgo(a)");
         System.out.println("5 - Figurante");
         System.out.println("6 - Iluminador(a)");
-        /*System.out.println("7 - Ponto");
+        System.out.println("7 - Ponto");
         System.out.println("8 - Produtor(a)");
-        System.out.println("9 - Peça");*/
+        System.out.println("9 - Peça");
         System.out.println("---------------------");
         System.out.println("Insira a opção pretendida.");
         
@@ -47,15 +47,29 @@ public class Editar {
                 break;
             case 4 :
                 editarDramaturgo();
+                break;
             case 5 :
                 editarFigurante();
+                break;
+            case 6 : 
+                editarIluminador();
+                break;
+            case 7 :
+                editarPonto();
+                break;
+            case 8 :
+                editarProdutor();
+                break;
+            case 9 : 
+                editarPeça();
+                break;
             default:
                 throw new AssertionError();
         }
         
     }    
     
-    private static Scanner x;
+    public static Scanner x;
     
     public static void editarAtor() throws FileNotFoundException, IOException{
         Scanner teclado = new Scanner(System.in);
@@ -144,7 +158,7 @@ public class Editar {
         }
     }
 
-    private static void editarDiretor() throws FileNotFoundException, IOException {    
+    public static void editarDiretor() throws FileNotFoundException, IOException {    
         Scanner teclado = new Scanner(System.in);
         
         System.out.println("Estes são os Diretores da Companhia neste momento: ");
@@ -231,7 +245,7 @@ public class Editar {
         }
     }
 
-    private static void editarCenografo() throws FileNotFoundException, IOException {
+    public static void editarCenografo() throws FileNotFoundException, IOException {
 
            Scanner teclado = new Scanner(System.in);
         
@@ -319,7 +333,7 @@ public class Editar {
         }
     }
 
-    private static void editarDramaturgo() throws FileNotFoundException, IOException {
+    public static void editarDramaturgo() throws FileNotFoundException, IOException {
         
              Scanner teclado = new Scanner(System.in);
         
@@ -407,7 +421,7 @@ public class Editar {
         }
     }
 
-    private static void editarFigurante() throws FileNotFoundException, IOException {
+    public static void editarFigurante() throws FileNotFoundException, IOException {
             
              Scanner teclado = new Scanner(System.in);
         
@@ -496,11 +510,11 @@ public class Editar {
     
     }
     
-    public static void editarIlumininador() throws FileNotFoundException, IOException{
+    public static void editarIluminador() throws FileNotFoundException, IOException{
         
         Scanner teclado = new Scanner(System.in);
         
-        System.out.println("Estes são os Iluminador da Companhia neste momento: ");
+        System.out.println("Estes são os Iluminadores da Companhia neste momento: ");
         
         try (BufferedReader br = new BufferedReader(new FileReader("figurantes.txt"))) {
                String line = null;
@@ -509,7 +523,7 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do Iliminador que quer fazer mudanças aos dados: ");
+        System.out.println("Introduza o nome do Iluminador que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
         System.out.println("Introduza o novo Nome: ");
@@ -585,7 +599,265 @@ public class Editar {
         
     }
   }
+
+    public static void editarPonto() throws FileNotFoundException, IOException {
+
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("Estes são os Pontos da Companhia neste momento: ");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("pontos.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        
+        System.out.println("Introduza o nome do Ponto que quer fazer mudanças aos dados: ");
+        String chave = teclado.nextLine();
+        
+        System.out.println("Introduza o novo Nome: ");
+        String newnome =teclado.nextLine();
+        
+        System.out.println("Introduza a nova Idade: ");
+        String newidade =teclado.nextLine();
+        
+        System.out.println("Introduza a nova nacionalidade: ");
+        String newnac =teclado.nextLine();
+    
+        System.out.println("Introduza o Genero: ");
+        String newgen=teclado.nextLine();
+    
+        System.out.println("Introduza as Habilitações ");
+        String newhab=teclado.nextLine();
+    
+        System.out.println("Introduza os Prémios ");
+        String newprem=teclado.nextLine();
+    
+        System.out.println("Introduza as Participações:  ");
+        String newpart =teclado.nextLine();
+    
+    
+        String tempfile="temp.txt";
+        File oldFile = new File("pontos.txt");
+        File newFile = new File(tempfile);
+        
+        String nome="";
+        String idade="";
+        String nac="";
+        String gen="";
+        String hab="";
+        String prem="";
+        String part="";
+        
+        
+        try{
+            FileWriter fw = new FileWriter(tempfile, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            x = new Scanner( new File ("pontos.txt"));
+            x.useDelimiter("[|\n]");
+        
+            while(x.hasNext()){
+                
+                nome=x.next();
+                idade=x.next();
+                nac=x.next();
+                gen=x.next();
+                hab=x.next();
+                prem=x.next();
+                part=x.next();
+                
+                if(nome.equals(chave)){
+                    
+                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newgen+"|"+newhab+"|"+newprem+"|"+newpart);
+                }else{
+                    pw.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+hab+"|"+prem+"|"+part);
+                }
+            }
+            
+            x.close();
+            pw.flush();
+            pw.close();
+            oldFile.delete();
+            File lixo = new File ("pontos.txt");
+            newFile.renameTo(lixo);
+        }
+        catch(Exception e){
+            System.out.println("Error");
+        
+        
+    }
+  }
+
+    public static void editarProdutor() throws FileNotFoundException, IOException {
+
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("Estes são os Produtores da Companhia neste momento: ");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("produtores.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        
+        System.out.println("Introduza o nome do Produtor que quer fazer mudanças aos dados: ");
+        String chave = teclado.nextLine();
+        
+        System.out.println("Introduza o novo Nome: ");
+        String newnome =teclado.nextLine();
+        
+        System.out.println("Introduza a nova Idade: ");
+        String newidade =teclado.nextLine();
+        
+        System.out.println("Introduza a nova nacionalidade: ");
+        String newnac =teclado.nextLine();
+    
+        System.out.println("Introduza o Genero: ");
+        String newgen=teclado.nextLine();
+    
+        System.out.println("Introduza as Habilitações ");
+        String newhab=teclado.nextLine();
+    
+        System.out.println("Introduza os Prémios ");
+        String newprem=teclado.nextLine();
+    
+        System.out.println("Introduza as Participações:  ");
+        String newpart =teclado.nextLine();
+    
+    
+        String tempfile="temp.txt";
+        File oldFile = new File("produtores.txt");
+        File newFile = new File(tempfile);
+        
+        String nome="";
+        String idade="";
+        String nac="";
+        String gen="";
+        String hab="";
+        String prem="";
+        String part="";
+        
+        
+        try{
+            FileWriter fw = new FileWriter(tempfile, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            x = new Scanner( new File ("produtores.txt"));
+            x.useDelimiter("[|\n]");
+        
+            while(x.hasNext()){
+                
+                nome=x.next();
+                idade=x.next();
+                nac=x.next();
+                gen=x.next();
+                hab=x.next();
+                prem=x.next();
+                part=x.next();
+                
+                if(nome.equals(chave)){
+                    
+                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newgen+"|"+newhab+"|"+newprem+"|"+newpart);
+                }else{
+                    pw.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+hab+"|"+prem+"|"+part);
+                }
+            }
+            
+            x.close();
+            pw.flush();
+            pw.close();
+            oldFile.delete();
+            File lixo = new File ("produtores.txt");
+            newFile.renameTo(lixo);
+        }
+        catch(Exception e){
+            System.out.println("Error");
+        
+        
+    }
+  }
+
+    public static void editarPeça() throws FileNotFoundException, IOException {
+        
+         
+        Scanner teclado = new Scanner (System.in); 
+        System.out.println("Estes são as Peças da Companhia neste momento:");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("peças.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        
+        System.out.println("Introduza o nome da Peça que quer fazer mudanças aos dados: ");
+        String chave = teclado.nextLine();
+        
+        System.out.println("Introduza o Nome: ");
+        String newnome=teclado.nextLine();
+        
+        System.out.println("Introduza o Dia: ");
+        String newdia =teclado.nextLine();
+        
+        System.out.println("Introduza o Mês: ");
+        String newmes =teclado.nextLine();
+        
+        System.out.println("Introduza o Ano: ");
+        String newano =teclado.nextLine();
+        
+        System.out.println("Introduza o Local : ");
+        String newlocal=teclado.nextLine();
+        
+        String tempfile="temp.txt";
+        File oldFile = new File("peças.txt");
+        File newFile = new File(tempfile);
+        
+        String dia="";
+        String mes="";
+        String ano="";
+        String nome="";
+        String local="";
+       
+        try{
+            FileWriter fw = new FileWriter(tempfile, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            x = new Scanner( new File ("peças.txt"));
+            x.useDelimiter("[|\n]");
+        
+            while(x.hasNext()){
+                
+                nome=x.next();
+                dia=x.next();
+                mes=x.next();
+                ano=x.next();
+                local=x.next();
+            
+                if(nome.equals(chave)){
+                    
+                    pw.println(newnome+"|"+newdia+"|"+newmes+"|"+newano+"|"+newlocal);
+                }else{
+                    pw.println(nome+"|"+dia+"|"+mes+"|"+ano+"|"+local);
+                }
+            }
+            
+            x.close();
+            pw.flush();
+            pw.close();
+            oldFile.delete();
+            File lixo = new File ("peças.txt");
+            newFile.renameTo(lixo);
+        }
+        catch(Exception e){
+            System.out.println("Error");
+        
+    }
+ }
 }
+
 
 
     

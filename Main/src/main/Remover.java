@@ -24,10 +24,10 @@ public class Remover {
         System.out.println("3 - Cenógrafo(a)");
         System.out.println("4 - Dramaturgo(a)");
         System.out.println("5 - Figurante");
-        /*System.out.println("6 - Iluminador(a)");
+        System.out.println("6 - Iluminador(a)");
         System.out.println("7 - Ponto");
         System.out.println("8 - Produtor(a)");
-        System.out.println("9 - Peça");*/
+        System.out.println("9 - Peça");
         System.out.println("---------------------");
         System.out.println("Insira a opção pretendida.");
         
@@ -49,13 +49,25 @@ public class Remover {
             case 5 :
                 removerFigurante();
                 break;
+            case 6 :
+                removerIluminador();
+                break;
+            case 7 :
+                removerPonto();
+                break;
+            case 8 :
+                removerProdutor();
+                break;
+            case 9 : 
+                removerPeça();
+                break;
             default:
                 throw new AssertionError();
         }
         
     }
     
-    static void removerAtor() throws IOException{
+    public static void removerAtor() throws IOException{
         
         System.out.println("Estes são os Atores da Companhia neste momento: ");
         
@@ -105,7 +117,7 @@ public class Remover {
         }
     }
 
-    private static void removerDiretor() throws FileNotFoundException, IOException {
+    public static void removerDiretor() throws FileNotFoundException, IOException {
             
         System.out.println("Estes são os Diretores da Companhia neste momento: ");
         
@@ -155,7 +167,7 @@ public class Remover {
         }
     }
 
-    private static void removerCenografo() throws FileNotFoundException, IOException {
+    public static void removerCenografo() throws FileNotFoundException, IOException {
           System.out.println("Estes são os Cenografos da Companhia neste momento: ");
         
         try (BufferedReader br = new BufferedReader(new FileReader("cenografos.txt"))) {
@@ -204,7 +216,7 @@ public class Remover {
         } 
     }
 
-    private static void removerDramaturgo() throws FileNotFoundException, IOException {
+    public static void removerDramaturgo() throws FileNotFoundException, IOException {
        
         System.out.println("Estes são os Dramaturgos da Companhia neste momento: ");
         
@@ -255,7 +267,7 @@ public class Remover {
 
     }
 
-    private static void removerFigurante() throws FileNotFoundException, IOException {
+    public static void removerFigurante() throws FileNotFoundException, IOException {
             
         System.out.println("Estes são os Figurantes da Companhia neste momento: ");
         
@@ -305,6 +317,214 @@ public class Remover {
         }
     }
 
+    public static void removerIluminador() throws IOException {
 
+          System.out.println("Estes são os Imuninadores da Companhia neste momento: ");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("iluminadores.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        Scanner teclado = new Scanner (System.in);
+        
+        //Teste se o ficheiro existe
+        File inputFile = new File("iluminadores.txt");
+        if (!inputFile.isFile()){
+            System.out.println("Não existem figurantes criados.");
+        }
+        
+        //Criação dum ficheiro temporário
+        File tempFile = new File(inputFile.getAbsolutePath() + ".tmp");
+        BufferedReader br = new BufferedReader(new FileReader("iluminadores.txt"));
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+        String linha;
+        String nome;
+        
+        System.out.println("Qual o nome (completo) do iluminador que quer apagar?");
+        nome = teclado.nextLine();
+
+        
+        //Ler até encontrar a linha
+        while ((linha = br.readLine()) != null){
+            if (!linha.startsWith(nome)){
+                pw.println(linha);
+                pw.flush();
+            }
+            
+        }
+        
+        pw.close();
+        br.close();
+        
+        if (!inputFile.delete()){
+            System.out.println("Não foi possível remover o ficheiro antigo.");
+        }
+        
+        if (!tempFile.renameTo(inputFile)){
+            System.out.println("Não foi possível editar o ficheiro.");
+        }
+
+    }
+
+    public static void removerPonto() throws FileNotFoundException, IOException {
+        
+        System.out.println("Estes são os Pontos da Companhia neste momento: ");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("pontos.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        Scanner teclado = new Scanner (System.in);
+        
+        //Teste se o ficheiro existe
+        File inputFile = new File("pontos.txt");
+        if (!inputFile.isFile()){
+            System.out.println("Não existem figurantes criados.");
+        }
+        
+        //Criação dum ficheiro temporário
+        File tempFile = new File(inputFile.getAbsolutePath() + ".tmp");
+        BufferedReader br = new BufferedReader(new FileReader("pontos.txt"));
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+        String linha;
+        String nome;
+        
+        System.out.println("Qual o nome (completo) do ponto que quer apagar?");
+        nome = teclado.nextLine();
+
+        
+        //Ler até encontrar a linha
+        while ((linha = br.readLine()) != null){
+            if (!linha.startsWith(nome)){
+                pw.println(linha);
+                pw.flush();
+            }
+            
+        }
+        
+        pw.close();
+        br.close();
+        
+        if (!inputFile.delete()){
+            System.out.println("Não foi possível remover o ficheiro antigo.");
+        }
+        
+        if (!tempFile.renameTo(inputFile)){
+            System.out.println("Não foi possível editar o ficheiro.");
+        }
+
+    }
+
+    public static void removerProdutor() throws FileNotFoundException, IOException {
+        
+        System.out.println("Estes são os Imuninadores da Companhia neste momento: ");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("produtores.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        Scanner teclado = new Scanner (System.in);
+        
+        //Teste se o ficheiro existe
+        File inputFile = new File("produtores.txt");
+        if (!inputFile.isFile()){
+            System.out.println("Não existem figurantes criados.");
+        }
+        
+        //Criação dum ficheiro temporário
+        File tempFile = new File(inputFile.getAbsolutePath() + ".tmp");
+        BufferedReader br = new BufferedReader(new FileReader("produtores.txt"));
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+        String linha;
+        String nome;
+        
+        System.out.println("Qual o nome (completo) do iluminador que quer apagar?");
+        nome = teclado.nextLine();
+
+        
+        //Ler até encontrar a linha
+        while ((linha = br.readLine()) != null){
+            if (!linha.startsWith(nome)){
+                pw.println(linha);
+                pw.flush();
+            }
+            
+        }
+        
+        pw.close();
+        br.close();
+        
+        if (!inputFile.delete()){
+            System.out.println("Não foi possível remover o ficheiro antigo.");
+        }
+        
+        if (!tempFile.renameTo(inputFile)){
+            System.out.println("Não foi possível editar o ficheiro.");
+        }
+
+    }
+
+    public static void removerPeça() throws FileNotFoundException, IOException {
+
+       System.out.println("Estes são as Peças da Companhia neste momento: ");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("peças.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        
+                Scanner teclado = new Scanner (System.in);
+        
+        //Teste se o ficheiro existe
+        File inputFile = new File("peças.txt");
+        if (!inputFile.isFile()){
+            System.out.println("Não existem Peças criados.");
+        }
+        
+        //Criação dum ficheiro temporário
+        File tempFile = new File(inputFile.getAbsolutePath() + ".tmp");
+        BufferedReader br = new BufferedReader(new FileReader("peças.txt"));
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+        String linha;
+        String nome;
+        
+        System.out.println("Qual o nome (completo) da Peça que quer apagar?");
+        nome = teclado.nextLine();
+
+        
+        //Ler até encontrar a linha
+        while ((linha = br.readLine()) != null){
+            if (!linha.startsWith(nome)){
+                pw.println(linha);
+                pw.flush();
+            }
+            
+        }
+        
+        pw.close();
+        br.close();
+        
+        if (!inputFile.delete()){
+            System.out.println("Não foi possível remover o ficheiro antigo.");
+        }
+        
+        if (!tempFile.renameTo(inputFile)){
+            System.out.println("Não foi possível editar o ficheiro.");
+        }
+
+    }
 }
+
+
+
+
+
 
