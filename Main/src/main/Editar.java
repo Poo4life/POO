@@ -26,8 +26,8 @@ public class Editar {
         System.out.println("3 - Cenógrafo(a)");
         System.out.println("4 - Dramaturgo(a)");
         System.out.println("5 - Figurante");
-        /*System.out.println("6 - Iluminador(a)");
-        System.out.println("7 - Ponto");
+        System.out.println("6 - Iluminador(a)");
+        /*System.out.println("7 - Ponto");
         System.out.println("8 - Produtor(a)");
         System.out.println("9 - Peça");*/
         System.out.println("---------------------");
@@ -126,9 +126,9 @@ public class Editar {
                 
                 if(nome.equals(chave)){
                     
-                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newhab+"|"+newprem+"|"+newpart);
+                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newgen+"|"+newhab+"|"+newprem+"|"+newpart);
                 }else{
-                    pw.println(nome+"|"+idade+"|"+nac+"|"+hab+"|"+prem+"|"+part);
+                    pw.println(nome+"|"+idade+"|"+nac+"|"+newgen+"|"+hab+"|"+prem+"|"+part);
                 }
             }
             
@@ -213,9 +213,9 @@ public class Editar {
                 
                 if(nome.equals(chave)){
                     
-                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newhab+"|"+newprem+"|"+newpart);
+                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newgen+"|"+newhab+"|"+newprem+"|"+newpart);
                 }else{
-                    pw.println(nome+"|"+idade+"|"+nac+"|"+hab+"|"+prem+"|"+part);
+                    pw.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+hab+"|"+prem+"|"+part);
                 }
             }
             
@@ -301,9 +301,9 @@ public class Editar {
                 
                 if(nome.equals(chave)){
                     
-                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newhab+"|"+newprem+"|"+newpart);
+                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newgen+"|"+newhab+"|"+newprem+"|"+newpart);
                 }else{
-                    pw.println(nome+"|"+idade+"|"+nac+"|"+hab+"|"+prem+"|"+part);
+                    pw.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+hab+"|"+prem+"|"+part);
                 }
             }
             
@@ -389,9 +389,9 @@ public class Editar {
                 
                 if(nome.equals(chave)){
                     
-                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newhab+"|"+newprem+"|"+newpart);
+                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newgen+"|"+newhab+"|"+newprem+"|"+newpart);
                 }else{
-                    pw.println(nome+"|"+idade+"|"+nac+"|"+hab+"|"+prem+"|"+part);
+                    pw.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+hab+"|"+prem+"|"+part);
                 }
             }
             
@@ -477,9 +477,9 @@ public class Editar {
                 
                 if(nome.equals(chave)){
                     
-                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newhab+"|"+newprem+"|"+newpart);
+                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newgen+"|"+newhab+"|"+newprem+"|"+newpart);
                 }else{
-                    pw.println(nome+"|"+idade+"|"+nac+"|"+hab+"|"+prem+"|"+part);
+                    pw.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+hab+"|"+prem+"|"+part);
                 }
             }
             
@@ -495,7 +495,96 @@ public class Editar {
         }
     
     }
-
+    
+    public static void editarIlumininador() throws FileNotFoundException, IOException{
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("Estes são os Iluminador da Companhia neste momento: ");
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("figurantes.txt"))) {
+               String line = null;
+               while ((line = br.readLine()) != null) {
+                 System.out.println(line);
+                }
+        }
+        
+        System.out.println("Introduza o nome do Iliminador que quer fazer mudanças aos dados: ");
+        String chave = teclado.nextLine();
+        
+        System.out.println("Introduza o novo Nome: ");
+        String newnome =teclado.nextLine();
+        
+        System.out.println("Introduza a nova Idade: ");
+        String newidade =teclado.nextLine();
+        
+        System.out.println("Introduza a nova nacionalidade: ");
+        String newnac =teclado.nextLine();
+    
+        System.out.println("Introduza o Genero: ");
+        String newgen=teclado.nextLine();
+    
+        System.out.println("Introduza as Habilitações ");
+        String newhab=teclado.nextLine();
+    
+        System.out.println("Introduza os Prémios ");
+        String newprem=teclado.nextLine();
+    
+        System.out.println("Introduza as Participações:  ");
+        String newpart =teclado.nextLine();
+    
+    
+        String tempfile="temp.txt";
+        File oldFile = new File("iluminadores.txt");
+        File newFile = new File(tempfile);
+        
+        String nome="";
+        String idade="";
+        String nac="";
+        String gen="";
+        String hab="";
+        String prem="";
+        String part="";
+        
+        
+        try{
+            FileWriter fw = new FileWriter(tempfile, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            x = new Scanner( new File ("iluminadores.txt"));
+            x.useDelimiter("[|\n]");
+        
+            while(x.hasNext()){
+                
+                nome=x.next();
+                idade=x.next();
+                nac=x.next();
+                gen=x.next();
+                hab=x.next();
+                prem=x.next();
+                part=x.next();
+                
+                if(nome.equals(chave)){
+                    
+                    pw.println(newnome+"|"+newidade+"|"+newnac+"|"+newgen+"|"+newhab+"|"+newprem+"|"+newpart);
+                }else{
+                    pw.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+hab+"|"+prem+"|"+part);
+                }
+            }
+            
+            x.close();
+            pw.flush();
+            pw.close();
+            oldFile.delete();
+            File lixo = new File ("iluminadores.txt");
+            newFile.renameTo(lixo);
+        }
+        catch(Exception e){
+            System.out.println("Error");
+        
+        
+    }
+  }
 }
 
 

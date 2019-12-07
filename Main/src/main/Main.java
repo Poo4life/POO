@@ -50,6 +50,7 @@ public class Main {
 
                 case 5:
                     System.out.println("Listar"); 
+                    Listar.menuListar();
                     break;
                 
                 case 0:
