@@ -63,7 +63,7 @@ public class Inserir {
                 inserirProdutor();
                 break;
             case 10: 
-                inserirPeça();
+                inserirPeca();
             default:    
                 throw new AssertionError();
         }
@@ -729,7 +729,7 @@ public class Inserir {
         produtor.status(); //Print do produtor  final
     }
     
-    public static void inserirPeça() throws FileNotFoundException{    
+    public static void inserirPeca() throws FileNotFoundException{    
         
         Scanner teclado = new Scanner (System.in);    
 
@@ -739,29 +739,29 @@ public class Inserir {
         String nome;
         String local;
        
-        Peça peça = new Peça(); 
+        Peca peca = new Peca(); 
     
         System.out.print("Nome da Peça: "); //Inserir nome da peça
         nome = teclado.nextLine();       
-        peça.setNome(nome);               
+        peca.setNome(nome);               
                    
         System.out.print("Dia de Apresentação: "); //Inserir dia da peça
         dia = teclado.nextInt();
-        peça.setDia(dia);
+        peca.setDia(dia);
         
         System.out.print("Mês de Apresentação: "); //Inserir mês da peça
         mes = teclado.nextLine();
-        peça.setMes(mes);
+        peca.setMes(mes);
         
         System.out.print("Ano de Apresentação: "); //Inserir ano da peça
         ano = teclado.nextInt();
-        peça.setAno(ano);
+        peca.setAno(ano);
 
         System.out.print("Local de Apresentação: "); //Inserir local de apresentação da peça
         local = teclado.nextLine();
-        peça.setLocal(local);
+        peca.setLocal(local);
         
-        try(FileWriter fw = new FileWriter("peças.txt", true);
+        try(FileWriter fw = new FileWriter("pecas.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
@@ -770,7 +770,7 @@ public class Inserir {
              System.out.println("erro");
          }
         System.out.println("Esta é a peça final:");
-        peça.status(); //Print do peça  final
+        peca.status(); //Print do peça  final
         
         
     }

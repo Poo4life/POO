@@ -18,10 +18,11 @@ public class Consultar {
         System.out.println("3 - Cenógrafo(a)");
         System.out.println("4 - Dramaturgo(a)");
         System.out.println("5 - Figurante");
-        System.out.println("6 - Iluminador(a)");
-        System.out.println("7 - Ponto");
-        System.out.println("8 - Produtor(a)");
-        //System.out.println("9 - Peça");
+        System.out.println("6 - Figurista");
+        System.out.println("7 - Iluminador(a)");
+        System.out.println("8 - Ponto");
+        System.out.println("9 - Produtor(a)");
+        System.out.println("10 - Peça");
         System.out.println("---------------------");
         System.out.println("Insira a opção pretendida.");
         
@@ -43,17 +44,20 @@ public class Consultar {
             case 5 :
                 consultarFigurante();
                 break;
-            case 6:
-                consultarIluminador();
+            case 6 :
+                consultarFigurista();
                 break;
             case 7:
-                consultarPonto();
+                consultarIluminador();
                 break;
             case 8:
-                consultarProdutor();
+                consultarPonto();
                 break;
             case 9:
-                consultarPeça();
+                consultarProdutor();
+                break;
+            case 10:
+                consultarPeca();
                 break;
             default:    
                 throw new AssertionError();
@@ -100,6 +104,14 @@ public class Consultar {
         }
     }    
     
+    public static void consultarFigurista() throws FileNotFoundException, IOException{
+        BufferedReader br = new BufferedReader(new FileReader("figuristas.txt"));
+        String linha;
+        while ((linha = br.readLine()) != null) {
+            System.out.println(linha);
+        }
+    }    
+    
     public static void consultarIluminador() throws FileNotFoundException, IOException{
         BufferedReader br = new BufferedReader(new FileReader("iluminadores.txt"));
         String linha;
@@ -124,8 +136,8 @@ public class Consultar {
         }
     }    
     
-    public static void consultarPeça() throws FileNotFoundException, IOException{
-        BufferedReader br = new BufferedReader(new FileReader("peças.txt"));
+    public static void consultarPeca() throws FileNotFoundException, IOException{
+        BufferedReader br = new BufferedReader(new FileReader("pecas.txt"));
         String linha;
         while ((linha = br.readLine()) != null) {
             System.out.println(linha);

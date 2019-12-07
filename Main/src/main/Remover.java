@@ -63,7 +63,7 @@ public class Remover {
                 removerProdutor();
                 break;
             case 10 : 
-                removerPeça();
+                removerPeca();
                 break;
             default:
                 throw new AssertionError();
@@ -524,11 +524,11 @@ public class Remover {
 
     }
 
-    public static void removerPeça() throws FileNotFoundException, IOException {
+    public static void removerPeca() throws FileNotFoundException, IOException {
 
        System.out.println("Estes são as Peças da Companhia neste momento: ");
         
-        try (BufferedReader br = new BufferedReader(new FileReader("peças.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("pecas.txt"))) {
                String line = null;
                while ((line = br.readLine()) != null) {
                  System.out.println(line);
@@ -538,14 +538,14 @@ public class Remover {
                 Scanner teclado = new Scanner (System.in);
         
         //Teste se o ficheiro existe
-        File inputFile = new File("peças.txt");
+        File inputFile = new File("pecas.txt");
         if (!inputFile.isFile()){
             System.out.println("Não existem Peças criados.");
         }
         
         //Criação dum ficheiro temporário
         File tempFile = new File(inputFile.getAbsolutePath() + ".tmp");
-        BufferedReader br = new BufferedReader(new FileReader("peças.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("pecas.txt"));
         PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
         String linha;
         String nome;

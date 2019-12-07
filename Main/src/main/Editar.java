@@ -65,7 +65,7 @@ public class Editar {
                 editarProdutor();
                 break;
             case 10 : 
-                editarPeça();
+                editarPeca();
                 break;
             default:
                 throw new AssertionError();
@@ -873,13 +873,13 @@ public class Editar {
     }
   }
 
-    public static void editarPeça() throws FileNotFoundException, IOException {
+    public static void editarPeca() throws FileNotFoundException, IOException {
         
          
         Scanner teclado = new Scanner (System.in); 
         System.out.println("Estes são as Peças da Companhia neste momento:");
         
-        try (BufferedReader br = new BufferedReader(new FileReader("peças.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("pecas.txt"))) {
                String line = null;
                while ((line = br.readLine()) != null) {
                  System.out.println(line);
@@ -905,7 +905,7 @@ public class Editar {
         String newlocal=teclado.nextLine();
         
         String tempfile="temp.txt";
-        File oldFile = new File("peças.txt");
+        File oldFile = new File("pecas.txt");
         File newFile = new File(tempfile);
         
         String dia="";
@@ -918,7 +918,7 @@ public class Editar {
             FileWriter fw = new FileWriter(tempfile, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            x = new Scanner( new File ("peças.txt"));
+            x = new Scanner( new File ("pecas.txt"));
             x.useDelimiter("[|\n]");
         
             while(x.hasNext()){
@@ -941,7 +941,7 @@ public class Editar {
             pw.flush();
             pw.close();
             oldFile.delete();
-            File lixo = new File ("peças.txt");
+            File lixo = new File ("pecas.txt");
             newFile.renameTo(lixo);
         }
         catch(Exception e){
