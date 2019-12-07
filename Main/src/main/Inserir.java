@@ -24,10 +24,10 @@ public class Inserir {
         System.out.println("3 - Cenógrafo(a)");
         System.out.println("4 - Dramaturgo(a)");
         System.out.println("5 - Figurante");
-       /* System.out.println("6 - Iluminador(a)");
+        System.out.println("6 - Iluminador(a)");
         System.out.println("7 - Ponto");
         System.out.println("8 - Produtor(a)");
-        System.out.println("9 - Peça");*/
+        //System.out.println("9 - Peça");
         System.out.println("---------------------");
         System.out.println("Insira a opção pretendida.");
         
@@ -49,11 +49,21 @@ public class Inserir {
             case 5 :
                 inserirFigurante();
                 break;
+            case 6:
+                inserirIluminador();
+                break;
+            case 7:
+                inserirPonto();
+                break;
+            case 8:
+                inserirProdutor();
+                break;
             default:    
                 throw new AssertionError();
         }
         
     }
+     
     static void inserirAtor() throws FileNotFoundException{    
         
         Scanner teclado = new Scanner (System.in);    
@@ -114,7 +124,7 @@ public class Inserir {
             ator.setParticipacoes(part); //Senão ficará o input
         }
         
-        try(FileWriter fw = new FileWriter("Atores.txt", true);
+        try(FileWriter fw = new FileWriter("atores.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
@@ -197,7 +207,7 @@ public class Inserir {
          } catch (IOException g){
              System.out.println("erro");
          }
-        System.out.println("Este é o ator final:");
+        System.out.println("Este é o(a) diretor(a) final:");
         diretor.status(); //Print do diretor  final
                 
     }    
@@ -271,7 +281,7 @@ public class Inserir {
          } catch (IOException g){
              System.out.println("erro");
          }
-        System.out.println("Este é o Cénografo final:");
+        System.out.println("Este é o(a) cénografo(a) final:");
         cenografo.status(); //Print do Cenógrafo final
                 
     }
@@ -344,11 +354,11 @@ public class Inserir {
          } catch (IOException g){
              System.out.println("erro");
          }
-        System.out.println("Este é o Dramaturgo final:");
+        System.out.println("Este é o(a) dramaturgo(a) final:");
         dramaturgo.status(); //Print do dramaturgo  final
     }
        
-         public static void inserirFigurante() throws FileNotFoundException{    
+    public static void inserirFigurante() throws FileNotFoundException{    
         
         Scanner teclado = new Scanner (System.in);    
 
@@ -417,12 +427,276 @@ public class Inserir {
          } catch (IOException g){
              System.out.println("erro");
          }
-        System.out.println("Este é o ator final:");
+        System.out.println("Este é o figurante final:");
         figurante.status(); //Print do figurante  final
     }
          
-         
-  
+    
+    public static void inserirIluminador() throws FileNotFoundException{    
+        
+        Scanner teclado = new Scanner (System.in);    
+
+        int idade;
+        String nd = "Não definido";
+        String nome;
+        String nac;
+        String gen;
+        String form;
+        String prem;
+        String part;
+       
+        Iluminador iluminador = new Iluminador(); 
+    
+        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        nome = teclado.nextLine();       
+        iluminador.setNome(nome);               
+                   
+        System.out.println("Qual a idade?"); //Inserir idade do ator
+        idade = teclado.nextInt();
+        iluminador.setIdade(idade);
+        
+        teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
+        
+        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        nac = teclado.nextLine();
+        iluminador.setNacionalidade(nac);
+        
+        System.out.println("Qual o género?"); //Inserir género
+        gen = teclado.nextLine();
+        iluminador.setGenero(gen);
+        
+        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        form = teclado.nextLine();
+        
+        if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            iluminador.setFormacao(nd);
+            form = nd;
+        }else{
+            iluminador.setFormacao(form); //Senão ficará o input
+        }    
+        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        prem = teclado.nextLine();
+                
+        if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            iluminador.setPremios(nd);
+            prem = nd;
+        }else{
+            iluminador.setPremios(prem); //Senão ficará o input
+        }   
+        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        part = teclado.nextLine();
+                
+        if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            iluminador.setParticipacoes("Não definido");
+            part = nd;
+        }else{
+            iluminador.setParticipacoes(part); //Senão ficará o input
+        }
+        
+        try(FileWriter fw = new FileWriter("iluminadores.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            out.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+form+"|"+prem+"|"+part);             
+         } catch (IOException g){
+             System.out.println("erro");
+         }
+        System.out.println("Este é o(a) iluminador(a) final:");
+        iluminador.status(); //Print do figurante  final
+    }
+    
+    public static void inserirPonto() throws FileNotFoundException{    
+        
+        Scanner teclado = new Scanner (System.in);    
+
+        int idade;
+        String nd = "Não definido";
+        String nome;
+        String nac;
+        String gen;
+        String form;
+        String prem;
+        String part;
+       
+        Ponto ponto = new Ponto(); 
+    
+        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        nome = teclado.nextLine();       
+        ponto.setNome(nome);               
+                   
+        System.out.println("Qual a idade?"); //Inserir idade do ator
+        idade = teclado.nextInt();
+        ponto.setIdade(idade);
+        
+        teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
+        
+        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        nac = teclado.nextLine();
+        ponto.setNacionalidade(nac);
+        
+        System.out.println("Qual o género?"); //Inserir género
+        gen = teclado.nextLine();
+        ponto.setGenero(gen);
+        
+        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        form = teclado.nextLine();
+        
+        if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            ponto.setFormacao(nd);
+            form = nd;
+        }else{
+            ponto.setFormacao(form); //Senão ficará o input
+        }    
+        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        prem = teclado.nextLine();
+                
+        if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            ponto.setPremios(nd);
+            prem = nd;
+        }else{
+            ponto.setPremios(prem); //Senão ficará o input
+        }   
+        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        part = teclado.nextLine();
+                
+        if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            ponto.setParticipacoes("Não definido");
+            part = nd;
+        }else{
+            ponto.setParticipacoes(part); //Senão ficará o input
+        }
+        
+        try(FileWriter fw = new FileWriter("pontos.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            out.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+form+"|"+prem+"|"+part);             
+         } catch (IOException g){
+             System.out.println("erro");
+         }
+        System.out.println("Este é o(a) ponto final:");
+        ponto.status(); //Print do figurante  final
+    }
+    
+    public static void inserirProdutor() throws FileNotFoundException{    
+        
+        Scanner teclado = new Scanner (System.in);    
+
+        int idade;
+        String nd = "Não definido";
+        String nome;
+        String nac;
+        String gen;
+        String form;
+        String prem;
+        String part;
+       
+        Produtor produtor = new Produtor(); 
+    
+        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        nome = teclado.nextLine();       
+        produtor.setNome(nome);               
+                   
+        System.out.println("Qual a idade?"); //Inserir idade do ator
+        idade = teclado.nextInt();
+        produtor.setIdade(idade);
+        
+        teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
+        
+        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        nac = teclado.nextLine();
+        produtor.setNacionalidade(nac);
+        
+        System.out.println("Qual o género?"); //Inserir género
+        gen = teclado.nextLine();
+        produtor.setGenero(gen);
+        
+        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        form = teclado.nextLine();
+        
+        if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            produtor.setFormacao(nd);
+            form = nd;
+        }else{
+            produtor.setFormacao(form); //Senão ficará o input
+        }    
+        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        prem = teclado.nextLine();
+                
+        if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            produtor.setPremios(nd);
+            prem = nd;
+        }else{
+            produtor.setPremios(prem); //Senão ficará o input
+        }   
+        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        part = teclado.nextLine();
+                
+        if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            produtor.setParticipacoes("Não definido");
+            part = nd;
+        }else{
+            produtor.setParticipacoes(part); //Senão ficará o input
+        }
+        
+        try(FileWriter fw = new FileWriter("produtores.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            out.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+form+"|"+prem+"|"+part);             
+         } catch (IOException g){
+             System.out.println("erro");
+         }
+        System.out.println("Este é o figurante final:");
+        produtor.status(); //Print do figurante  final
+    }
+    
+    public static void inserirPeça() throws FileNotFoundException{    
+        
+        Scanner teclado = new Scanner (System.in);    
+
+        int dia;
+        String mes;
+        int ano;
+        String nome;
+        String local;
+       
+        Peça peça = new Peça(); 
+    
+        System.out.println("Qual o nome (completo)?"); //Inserir nome da peça
+        nome = teclado.nextLine();       
+        peça.setNome(nome);               
+                   
+        System.out.println("Qual o dia da apresentação da peça?"); //Inserir dia da peça
+        dia = teclado.nextInt();
+        peça.setDia(dia);
+        
+        System.out.println("Qual o mês da apresentação da peça?"); //Inserir mês da peça
+        mes = teclado.nextLine();
+        peça.setMes(mes);
+        
+        System.out.println("Qual o ano da apresentação da peça?"); //Inserir ano da peça
+        ano = teclado.nextInt();
+        peça.setAno(ano);
+
+        System.out.println("Qual o local da apresentação da peça?"); //Inserir local de apresentação da peça
+        local = teclado.nextLine();
+        peça.setLocal(local);
+        
+        try(FileWriter fw = new FileWriter("peças.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            out.println(nome+"|"+dia+"|"+mes+"|"+ano);             
+         } catch (IOException g){
+             System.out.println("erro");
+         }
+        System.out.println("Esta é a peça final:");
+        peça.status(); //Print do figurante  final
+        
+        
+    }
+    
 }
 
 
