@@ -96,16 +96,16 @@ public class Editar {
         System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.print("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova Nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.print("Introduza o Genero: ");
+        System.out.print("Introduza o Género: ");
         String newgen=teclado.nextLine();
     
-        System.out.print("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações: ");
         String newhab=teclado.nextLine();
     
-        System.out.print("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios: ");
         String newprem=teclado.nextLine();
     
         System.out.print("Introduza as Participações:  ");
@@ -183,16 +183,16 @@ public class Editar {
         System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.print("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova Nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.print("Introduza o Genero: ");
+        System.out.print("Introduza o Género: ");
         String newgen=teclado.nextLine();
     
-        System.out.print("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações: ");
         String newhab=teclado.nextLine();
     
-        System.out.print("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios: ");
         String newprem=teclado.nextLine();
     
         System.out.print("Introduza as Participações:  ");
@@ -271,16 +271,16 @@ public class Editar {
         System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.print("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova Nacionalidade: ");
         String newnac =teclado.nextLine();
     
         System.out.print("Introduza o Genero: ");
         String newgen=teclado.nextLine();
     
-        System.out.print("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações: ");
         String newhab=teclado.nextLine();
     
-        System.out.print("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios: ");
         String newprem=teclado.nextLine();
     
         System.out.print("Introduza as Participações:  ");
@@ -359,16 +359,16 @@ public class Editar {
         System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.print("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova Nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.print("Introduza o Genero: ");
+        System.out.print("Introduza o Género: ");
         String newgen=teclado.nextLine();
     
-        System.out.print("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações: ");
         String newhab=teclado.nextLine();
     
-        System.out.print("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios: ");
         String newprem=teclado.nextLine();
     
         System.out.print("Introduza as Participações:  ");
@@ -447,16 +447,16 @@ public class Editar {
         System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.print("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova Nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.print("Introduza o Genero: ");
+        System.out.print("Introduza o Género: ");
         String newgen=teclado.nextLine();
     
-        System.out.print("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações: ");
         String newhab=teclado.nextLine();
     
-        System.out.print("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios: ");
         String newprem=teclado.nextLine();
     
         System.out.print("Introduza as Participações:  ");
@@ -536,16 +536,16 @@ public class Editar {
         System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.print("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova Nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.print("Introduza o Genero: ");
+        System.out.print("Introduza o Género: ");
         String newgen=teclado.nextLine();
     
-        System.out.print("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações: ");
         String newhab=teclado.nextLine();
     
-        System.out.print("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios: ");
         String newprem=teclado.nextLine();
     
         System.out.print("Introduza as Participações:  ");
@@ -625,16 +625,16 @@ public class Editar {
         System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.print("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova Nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.print("Introduza o Genero: ");
+        System.out.print("Introduza o Género: ");
         String newgen=teclado.nextLine();
     
-        System.out.print("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações: ");
         String newhab=teclado.nextLine();
     
-        System.out.print("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios: ");
         String newprem=teclado.nextLine();
     
         System.out.print("Introduza as Participações:  ");
@@ -715,16 +715,16 @@ public class Editar {
         System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.print("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova Nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.print("Introduza o Genero: ");
+        System.out.print("Introduza o Género: ");
         String newgen=teclado.nextLine();
     
-        System.out.print("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações: ");
         String newhab=teclado.nextLine();
     
-        System.out.print("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios: ");
         String newprem=teclado.nextLine();
     
         System.out.print("Introduza as Participações:  ");
@@ -805,16 +805,16 @@ public class Editar {
         System.out.print("Introduza a nova Idade: ");
         String newidade =teclado.nextLine();
         
-        System.out.print("Introduza a nova nacionalidade: ");
+        System.out.print("Introduza a nova Nacionalidade: ");
         String newnac =teclado.nextLine();
     
-        System.out.print("Introduza o Genero: ");
+        System.out.print("Introduza o Género: ");
         String newgen=teclado.nextLine();
     
-        System.out.print("Introduza as Habilitações ");
+        System.out.print("Introduza as Habilitações: ");
         String newhab=teclado.nextLine();
     
-        System.out.print("Introduza os Prémios ");
+        System.out.print("Introduza os Prémios: ");
         String newprem=teclado.nextLine();
     
         System.out.print("Introduza as Participações:  ");
