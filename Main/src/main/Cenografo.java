@@ -78,7 +78,7 @@ public class Cenografo {
    
     
     void status(){
-        System.out.println("Cenógrafo: " + this.nome);
+        System.out.println("Cenógrafo(a): " + this.nome);
         System.out.println("Idade: " + this.idade);
         System.out.println("Género: " + this.genero);
         System.out.println("Nacionalidade: " + this.nacionalidade);
@@ -95,20 +95,20 @@ public class Cenografo {
     
     void designar(){
         if (this.ocupado == true){
-            System.out.println("O Cenógrafo já está designado para outra peça.");
+            System.out.println("O/A Cenógrafo(a) já está designado para outra peça.");
         } else{
-            System.out.println("Para que peça quer designar o(a) Cenógrafo?");
+            System.out.println("Para que peça quer designar o(a) Cenógrafo(a)?");
             
             //Listar peças e abrir input
-            System.out.println("Cenógrafo " + this.nome + " foi designado para a peça " /*+ peça*/);
+            System.out.println("Cenógrafo(a) " + this.nome + " foi designado para a peça " /*+ peça*/);
         }   
     }
     
     void desocupar(){
         if (this.ocupado == false){
-            System.out.println("O Cenógrafo já se encontra desocupado.");
+            System.out.println("O/A Cenógrafo(a) já se encontra desocupado(a).");
         }else{
-            System.out.println("Cenógrafo desocupado.");
+            System.out.println("Cenógrafo(a) desocupado(a).");
             this.ocupado = false;
         }
     }

@@ -1,7 +1,5 @@
 package main;
-
-public class Dramaturgo {
-    
+public class Ator {
     String nome;
     int idade;
     String genero;
@@ -77,7 +75,7 @@ public class Dramaturgo {
    
     
     void status(){
-        System.out.println("Dramaturgo(a): " + this.nome);
+        System.out.println("Ator/Atriz: " + this.nome);
         System.out.println("Idade: " + this.idade);
         System.out.println("Género: " + this.genero);
         System.out.println("Nacionalidade: " + this.nacionalidade);
@@ -94,23 +92,22 @@ public class Dramaturgo {
     
     void designar(){
         if (this.ocupado == true){
-            System.out.println("O/A Dramaturgo(a) já está designado(a) para outra peça.");
+            System.out.println("O ator já está designado para outra peça.");
         } else{
-            System.out.println("Para que peça quer designar o(a) dramaturgo(a)?");
+            System.out.println("Para que peça quer designar o(a) ator/atriz?");
             
             //Listar peças e abrir input
-            System.out.println("Dramaturgo(a) " + this.nome + " foi designado(a) para a peça " /*+ peça*/);
+            System.out.println("Ator " + this.nome + " foi designado para a peça " /*+ peça*/);
         }   
     }
     
     void desocupar(){
         if (this.ocupado == false){
-            System.out.println("O/A dramaturgo(a) já se encontra desocupado(a).");
+            System.out.println("O ator/atriz já se encontra desocupado.");
         }else{
-            System.out.println("Dramaturgo(a) desocupado(a).");
+            System.out.println("Ator desocupado.");
             this.ocupado = false;
         }
     }
-    
+  
 }
-

@@ -69,7 +69,7 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do Ator que quer fazer mudanças aos dados: ");
+        System.out.println("Introduza o nome do(a) ator/atriz que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
         System.out.println("Introduza o novo Nome: ");
@@ -156,7 +156,7 @@ public class Editar {
                 }
         }
         
-        System.out.println("Introduza o nome do Diretor que quer fazer mudanças aos dados: ");
+        System.out.println("Introduza o nome do(a) diretor(a) que quer fazer mudanças aos dados: ");
         String chave = teclado.nextLine();
         
         System.out.println("Introduza o novo Nome: ");

@@ -31,7 +31,7 @@ public class Main {
                     
                 case 1:
                     System.out.println("Inserir Dados"); //Estes souts são só exemplos, foi para testar, aqui depois se calhar entra uma função só para inserir.
-                    Inserir2_1.menu();
+                    Inserir.menu();
                     break;
 
                 case 2:

@@ -78,7 +78,7 @@ public class Diretor {
    
     
     void status(){
-        System.out.println("Diretor: " + this.nome);
+        System.out.println("Diretor(a): " + this.nome);
         System.out.println("Idade: " + this.idade);
         System.out.println("Género: " + this.genero);
         System.out.println("Nacionalidade: " + this.nacionalidade);
@@ -95,20 +95,20 @@ public class Diretor {
     
     void designar(){
         if (this.ocupado == true){
-            System.out.println("O diretor já está designado para outra peça.");
+            System.out.println("O/A diretor(a) já está designado(a) para outra peça.");
         } else{
-            System.out.println("Para que peça quer designar o(a) diretor?");
+            System.out.println("Para que peça quer designar o(a) diretor(a)?");
             
             //Listar peças e abrir input
-            System.out.println("diretor " + this.nome + " foi designado para a peça " /*+ peça*/);
+            System.out.println("Diretor(a) " + this.nome + " foi designado para a peça " /*+ peça*/);
         }   
     }
     
     void desocupar(){
         if (this.ocupado == false){
-            System.out.println("O diretor já se encontra desocupado.");
+            System.out.println("O/A diretor(a) já se encontra desocupado(a).");
         }else{
-            System.out.println("diretor desocupado.");
+            System.out.println("Diretor(a) desocupado(a).");
             this.ocupado = false;
         }
     }
