@@ -30,32 +30,29 @@ public class Main {
             switch (opcao) {
                     
                 case 1:
-                    System.out.println("Inserir Dados"); //Estes souts são só exemplos, foi para testar, aqui depois se calhar entra uma função só para inserir.
                     Inserir.menu();
                     break;
 
                 case 2:
-                    System.out.println("Editar");
                     Editar.menuEditar();
                     break;
 
                 case 3:
-                    System.out.println("Apagar");
                     Remover.menuRemover();
                     break;
 
                 case 4:
-                    System.out.println("Consultar");
+                    Consultar.menu();
                     break;
 
                 case 5:
-                    System.out.println("Listar"); 
                     Listar.menuListar();
                     break;
                 
                 case 0:
                     System.out.println("A fechar...");
                     System.err.println("Programa encerrado.");
+                    
                 default:
                     System.err.println("Opção inválida");
             }                
