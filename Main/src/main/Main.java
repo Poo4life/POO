@@ -16,14 +16,14 @@ public class Main {
             System.out.println("-----------------");
             System.out.println("1 - Inserir Dados");
             System.out.println("2 - Editar Dados");
-            System.out.println("3 - Apagar Dados");
+            System.out.println("3 - Remover Dados");
             System.out.println("4 - Consultar");
             System.out.println("5 - Listar");
             System.out.println("");
             System.out.println("0 - Sair");
             System.out.println("-----------------");
             System.out.println("");
-            System.out.println("Introduza a opção pretendida.");
+            System.out.print("Introduza a opção pretendida.");
             
             opcao= teclado.nextInt();
             
