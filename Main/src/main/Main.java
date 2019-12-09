@@ -1,12 +1,17 @@
 package main;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner; //Scanner Class
 
 public class Main {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
         int opcao;
+        ArrayList<String> Ator = new ArrayList();
+        String file_path = "";
+        FileOutputSystem 
+        
         Scanner teclado = new Scanner(System.in); //Input
         
         do{

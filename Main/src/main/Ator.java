@@ -109,5 +109,10 @@ public class Ator {
             this.ocupado = false;
         }
     }
+    
+    /*public Ator inserirAtor(String nome, Int idade){
+        Ator ator = new Ator(nome,idade);
+        
+    }*/
   
 }

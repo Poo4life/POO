@@ -79,6 +79,7 @@ public class Inserir {
         String prem;
         String part;
         Ator ator = new Ator(); 
+        
     
         System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
         nome = teclado.nextLine();       

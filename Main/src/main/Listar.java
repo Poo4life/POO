@@ -6,13 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
-import static main.Inserir.inserirAtor;
-import static main.Inserir.inserirDiretor;
-import static main.Inserir.inserirDramaturgo;
-import static main.Inserir.inserirFigurante;
-import static main.Inserir.inserirIluminador;
-import static main.Inserir.inserirPonto;
-import static main.Inserir.inserirProdutor;
+
 
 
 public class Listar {
