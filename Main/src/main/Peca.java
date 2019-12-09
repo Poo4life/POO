@@ -1,5 +1,5 @@
 package main;
-public class Peça {
+public class Peca {
     String nome;
     int dia;
     String mes;

@@ -24,12 +24,13 @@ public class Inserir {
         System.out.println("3 - Cenógrafo(a)");
         System.out.println("4 - Dramaturgo(a)");
         System.out.println("5 - Figurante");
-        System.out.println("6 - Iluminador(a)");
-        System.out.println("7 - Ponto");
-        System.out.println("8 - Produtor(a)");
-        System.out.println("9 - Peça");
+        System.out.println("6 - Figurista");
+        System.out.println("7 - Iluminador(a)");
+        System.out.println("8 - Ponto");
+        System.out.println("9 - Produtor(a)");
+        System.out.println("10 - Peça");
         System.out.println("---------------------");
-        System.out.println("Insira a opção pretendida.");
+        System.out.print("Insira a opção pretendida: ");
         
         opcao=teclado.nextInt();
         
@@ -50,16 +51,19 @@ public class Inserir {
                 inserirFigurante();
                 break;
             case 6:
-                inserirIluminador();
+                inserirFigurista();
                 break;
             case 7:
-                inserirPonto();
+                inserirIluminador();
                 break;
             case 8:
+                inserirPonto();
+                break;
+            case 9:
                 inserirProdutor();
                 break;
-            case 9 : 
-                inserirPeça();
+            case 10: 
+                inserirPeca();
             default:    
                 throw new AssertionError();
         }
@@ -81,25 +85,25 @@ public class Inserir {
         Ator ator = new Ator(); 
         
     
-        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        System.out.print("Nome Completo: "); //Inserir nome do ator
         nome = teclado.nextLine();       
         ator.setNome(nome);               
                    
-        System.out.println("Qual a idade?"); //Inserir idade do ator
+        System.out.print("Idade: "); //Inserir idade do ator
         idade = teclado.nextInt();
         ator.setIdade(idade);
         
         teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
         
-        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        System.out.print("Nacionalidade: "); //Inserir nacionalidade
         nac = teclado.nextLine();
         ator.setNacionalidade(nac);
         
-        System.out.println("Qual o género?"); //Inserir género
+        System.out.print("Género: "); //Inserir género
         gen = teclado.nextLine();
         ator.setGenero(gen);
         
-        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        System.out.print("Formação (Aperte enter para não definir): "); //Inserir formacao
         form = teclado.nextLine();
         
         if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -108,7 +112,7 @@ public class Inserir {
         }else{
             ator.setFormacao(form); //Senão ficará o input
         }    
-        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        System.out.print("Prémios (Aperte enter para não definir): ");
         prem= teclado.nextLine();
                 
         if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -117,7 +121,7 @@ public class Inserir {
         }else{
             ator.setPremios(prem); //Senão ficará o input
         }   
-        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        System.out.print("Participações (Aperte enter para não definir): ");
         part = teclado.nextLine();
                 
         if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -155,25 +159,25 @@ public class Inserir {
        
         Diretor diretor = new Diretor(); 
     
-        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        System.out.print("Nome Completo: "); //Inserir nome do ator
         nome = teclado.nextLine();       
         diretor.setNome(nome);               
                    
-        System.out.println("Qual a idade?"); //Inserir idade do ator
+        System.out.print("Idade: "); //Inserir idade do ator
         idade = teclado.nextInt();
         diretor.setIdade(idade);
         
         teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
         
-        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        System.out.print("Nacionalidade: "); //Inserir nacionalidade
         nac = teclado.nextLine();
         diretor.setNacionalidade(nac);
         
-        System.out.println("Qual o género?"); //Inserir género
+        System.out.print("Género: "); //Inserir género
         gen = teclado.nextLine();
         diretor.setGenero(gen);
         
-        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        System.out.print("Formação (Aperte enter para não definir): "); //Inserir formacao
         form = teclado.nextLine();
         
         if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -182,7 +186,7 @@ public class Inserir {
         }else{
             diretor.setFormacao(form); //Senão ficará o input
         }    
-        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        System.out.print("Prémios (Aperte enter para não definir): ");
         prem = teclado.nextLine();
                 
         if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -191,7 +195,7 @@ public class Inserir {
         }else{
             diretor.setPremios(prem); //Senão ficará o input
         }   
-        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        System.out.print("Participações (Aperte enter para não definir): ");
         part = teclado.nextLine();
                 
         if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -229,25 +233,25 @@ public class Inserir {
        
         Cenografo cenografo = new Cenografo(); 
     
-        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        System.out.print("Nome Completo: "); //Inserir nome do ator
         nome = teclado.nextLine();       
         cenografo.setNome(nome);               
                    
-        System.out.println("Qual a idade?"); //Inserir idade do ator
+        System.out.print("Idade: "); //Inserir idade do ator
         idade = teclado.nextInt();
         cenografo.setIdade(idade);
         
         teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
         
-        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        System.out.print("Nacionalidade: "); //Inserir nacionalidade
         nac = teclado.nextLine();
         cenografo.setNacionalidade(nac);
         
-        System.out.println("Qual o género?"); //Inserir género
+        System.out.print("Género: "); //Inserir género
         gen = teclado.nextLine();
         cenografo.setGenero(gen);
         
-        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        System.out.print("Formação (Aperte enter para não definir): "); //Inserir formacao
         form = teclado.nextLine();
         
         if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -256,7 +260,7 @@ public class Inserir {
         }else{
             cenografo.setFormacao(form); //Senão ficará o input
         }    
-        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        System.out.print("Prémios (Aperte enter para não definir): ");
         prem = teclado.nextLine();
                 
         if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -265,7 +269,7 @@ public class Inserir {
         }else{
             cenografo.setPremios(prem); //Senão ficará o input
         }   
-        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        System.out.print("Participações (Aperte enter para não definir): ");
         part = teclado.nextLine();
                 
         if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -303,25 +307,25 @@ public class Inserir {
        
         Dramaturgo dramaturgo = new Dramaturgo(); 
     
-        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        System.out.print("Nome Completo: "); //Inserir nome do ator
         nome = teclado.nextLine();       
         dramaturgo.setNome(nome);               
                    
-        System.out.println("Qual a idade?"); //Inserir idade do ator
+        System.out.print("Idade: "); //Inserir idade do ator
         idade = teclado.nextInt();
         dramaturgo.setIdade(idade);
         
         teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
         
-        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        System.out.print("Nacionalidade: "); //Inserir nacionalidade
         nac = teclado.nextLine();
         dramaturgo.setNacionalidade(nac);
         
-        System.out.println("Qual o género?"); //Inserir género
+        System.out.print("Género: "); //Inserir género
         gen = teclado.nextLine();
         dramaturgo.setGenero(gen);
         
-        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        System.out.print("Formação (Aperte enter para não definir): "); //Inserir formacao
         form = teclado.nextLine();
         
         if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -330,7 +334,7 @@ public class Inserir {
         }else{
             dramaturgo.setFormacao(form); //Senão ficará o input
         }    
-        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        System.out.print("Prémios (Aperte enter para não definir): ");
         prem = teclado.nextLine();
                 
         if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -339,7 +343,7 @@ public class Inserir {
         }else{
             dramaturgo.setPremios(prem); //Senão ficará o input
         }   
-        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        System.out.print("Participações (Aperte enter para não definir): ");
         part = teclado.nextLine();
                 
         if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -376,25 +380,25 @@ public class Inserir {
        
         Figurante figurante = new Figurante(); 
     
-        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        System.out.print("Nome Completo: "); //Inserir nome do ator
         nome = teclado.nextLine();       
         figurante.setNome(nome);               
                    
-        System.out.println("Qual a idade?"); //Inserir idade do ator
+        System.out.print("Idade: "); //Inserir idade do ator
         idade = teclado.nextInt();
         figurante.setIdade(idade);
         
         teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
         
-        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        System.out.print("Nacionalidade: "); //Inserir nacionalidade
         nac = teclado.nextLine();
         figurante.setNacionalidade(nac);
         
-        System.out.println("Qual o género?"); //Inserir género
+        System.out.print("Género: "); //Inserir género
         gen = teclado.nextLine();
         figurante.setGenero(gen);
         
-        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        System.out.print("Formação (Aperte enter para não definir): "); //Inserir formacao
         form = teclado.nextLine();
         
         if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -403,7 +407,7 @@ public class Inserir {
         }else{
             figurante.setFormacao(form); //Senão ficará o input
         }    
-        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        System.out.print("Prémios (Aperte enter para não definir): ");
         prem = teclado.nextLine();
                 
         if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -412,7 +416,7 @@ public class Inserir {
         }else{
             figurante.setPremios(prem); //Senão ficará o input
         }   
-        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        System.out.print("Participações (Aperte enter para não definir): ");
         part = teclado.nextLine();
                 
         if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -433,7 +437,80 @@ public class Inserir {
         System.out.println("Este é o figurante final:");
         figurante.status(); //Print do figurante  final
     }
-             
+     
+    public static void inserirFigurista() throws FileNotFoundException{    
+        
+        Scanner teclado = new Scanner (System.in);    
+
+        int idade;
+        String nd = "Não definido";
+        String nome;
+        String nac;
+        String gen;
+        String form;
+        String prem;
+        String part;
+       
+        Figurista figurista = new Figurista(); 
+    
+        System.out.print("Nome Completo: "); //Inserir nome do ator
+        nome = teclado.nextLine();       
+        figurista.setNome(nome);               
+                   
+        System.out.print("Idade: "); //Inserir idade do ator
+        idade = teclado.nextInt();
+        figurista.setIdade(idade);
+        
+        teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
+        
+        System.out.print("Nacionalidade: "); //Inserir nacionalidade
+        nac = teclado.nextLine();
+        figurista.setNacionalidade(nac);
+        
+        System.out.print("Género: "); //Inserir género
+        gen = teclado.nextLine();
+        figurista.setGenero(gen);
+        
+        System.out.print("Formação (Aperte enter para não definir): "); //Inserir formacao
+        form = teclado.nextLine();
+        
+        if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            figurista.setFormacao(nd);
+            form = nd;
+        }else{
+            figurista.setFormacao(form); //Senão ficará o input
+        }    
+        System.out.print("Prémios (Aperte enter para não definir): ");
+        prem = teclado.nextLine();
+                
+        if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            figurista.setPremios(nd);
+            prem = nd;
+        }else{
+            figurista.setPremios(prem); //Senão ficará o input
+        }   
+        System.out.print("Participações (Aperte enter para não definir): ");
+        part = teclado.nextLine();
+                
+        if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
+            figurista.setParticipacoes("Não definido");
+            part = nd;
+        }else{
+            figurista.setParticipacoes(part); //Senão ficará o input
+        }
+        
+        try(FileWriter fw = new FileWriter("figuristas.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            out.println(nome+"|"+idade+"|"+nac+"|"+gen+"|"+form+"|"+prem+"|"+part);             
+         } catch (IOException g){
+             System.out.println("erro");
+         }
+        System.out.println("Este é o figurista final:");
+        figurista.status(); //Print do figurante  final
+    }
+    
     public static void inserirIluminador() throws FileNotFoundException{    
         
         Scanner teclado = new Scanner (System.in);    
@@ -449,25 +526,25 @@ public class Inserir {
        
         Iluminador iluminador = new Iluminador(); 
     
-        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        System.out.print("Nome completo: "); //Inserir nome do ator
         nome = teclado.nextLine();       
         iluminador.setNome(nome);               
                    
-        System.out.println("Qual a idade?"); //Inserir idade do ator
+        System.out.print("Idade: "); //Inserir idade do ator
         idade = teclado.nextInt();
         iluminador.setIdade(idade);
         
         teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
         
-        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        System.out.print("Nacionalidade: "); //Inserir nacionalidade
         nac = teclado.nextLine();
         iluminador.setNacionalidade(nac);
         
-        System.out.println("Qual o género?"); //Inserir género
+        System.out.print("Género: "); //Inserir género
         gen = teclado.nextLine();
         iluminador.setGenero(gen);
         
-        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        System.out.print("Formação (Aperte enter para não definir): "); //Inserir formacao
         form = teclado.nextLine();
         
         if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -476,7 +553,7 @@ public class Inserir {
         }else{
             iluminador.setFormacao(form); //Senão ficará o input
         }    
-        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        System.out.print("Prémios (Aperte enter para não definir): ");
         prem = teclado.nextLine();
                 
         if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -485,7 +562,7 @@ public class Inserir {
         }else{
             iluminador.setPremios(prem); //Senão ficará o input
         }   
-        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        System.out.print("Participações (Aperte enter para não definir): ");
         part = teclado.nextLine();
                 
         if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -522,25 +599,25 @@ public class Inserir {
        
         Ponto ponto = new Ponto(); 
     
-        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        System.out.print("Nome Completo: "); //Inserir nome do ator
         nome = teclado.nextLine();       
         ponto.setNome(nome);               
                    
-        System.out.println("Qual a idade?"); //Inserir idade do ator
+        System.out.print("Idade: "); //Inserir idade do ator
         idade = teclado.nextInt();
         ponto.setIdade(idade);
         
         teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
         
-        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        System.out.print("Nacionalidade: "); //Inserir nacionalidade
         nac = teclado.nextLine();
         ponto.setNacionalidade(nac);
         
-        System.out.println("Qual o género?"); //Inserir género
+        System.out.print("Género: "); //Inserir género
         gen = teclado.nextLine();
         ponto.setGenero(gen);
         
-        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        System.out.print("Formação (Aperte enter para não definir): "); //Inserir formacao
         form = teclado.nextLine();
         
         if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -549,7 +626,7 @@ public class Inserir {
         }else{
             ponto.setFormacao(form); //Senão ficará o input
         }    
-        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        System.out.print("Prémios (Aperte enter para não definir): ");
         prem = teclado.nextLine();
                 
         if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -558,7 +635,7 @@ public class Inserir {
         }else{
             ponto.setPremios(prem); //Senão ficará o input
         }   
-        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        System.out.print("Participações (Aperte enter para não definir): ");
         part = teclado.nextLine();
                 
         if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -595,25 +672,25 @@ public class Inserir {
        
         Produtor produtor = new Produtor(); 
     
-        System.out.println("Qual o nome (completo)?"); //Inserir nome do ator
+        System.out.print("Nome Completo: "); //Inserir nome do ator
         nome = teclado.nextLine();       
         produtor.setNome(nome);               
                    
-        System.out.println("Qual a idade?"); //Inserir idade do ator
+        System.out.print("Idade: "); //Inserir idade do ator
         idade = teclado.nextInt();
         produtor.setIdade(idade);
         
         teclado.nextLine(); //Linha necesária para limpar o nextInt, senão salta o próximo nextLine
         
-        System.out.println("Qual a nacionalidade?"); //Inserir nacionalidade
+        System.out.print("Nacionalidade: "); //Inserir nacionalidade
         nac = teclado.nextLine();
         produtor.setNacionalidade(nac);
         
-        System.out.println("Qual o género?"); //Inserir género
+        System.out.print("Género: "); //Inserir género
         gen = teclado.nextLine();
         produtor.setGenero(gen);
         
-        System.out.println("Qual a sua formação (Aperte enter para não definir)?"); //Inserir formacao
+        System.out.print("Formação (Aperte enter para não definir): "); //Inserir formacao
         form = teclado.nextLine();
         
         if (form.equals(null) || form.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -622,7 +699,7 @@ public class Inserir {
         }else{
             produtor.setFormacao(form); //Senão ficará o input
         }    
-        System.out.println("Quais os seus prémios (Aperte enter para não definir)?");
+        System.out.print("Prémios (Aperte enter para não definir): ");
         prem = teclado.nextLine();
                 
         if (prem.equals(null) || prem.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -631,7 +708,7 @@ public class Inserir {
         }else{
             produtor.setPremios(prem); //Senão ficará o input
         }   
-        System.out.println("Quais as suas participações? (Aperte enter para não definir)?");
+        System.out.print("Participações (Aperte enter para não definir): ");
         part = teclado.nextLine();
                 
         if (part.equals(null) || part.equals("")){ //Caso não seja definido, a string torna-se "Não definido"
@@ -653,7 +730,7 @@ public class Inserir {
         produtor.status(); //Print do produtor  final
     }
     
-    public static void inserirPeça() throws FileNotFoundException{    
+    public static void inserirPeca() throws FileNotFoundException{    
         
         Scanner teclado = new Scanner (System.in);    
 
@@ -663,29 +740,29 @@ public class Inserir {
         String nome;
         String local;
        
-        Peça peça = new Peça(); 
+        Peca peca = new Peca(); 
     
-        System.out.println("Qual o nome (completo)?"); //Inserir nome da peça
+        System.out.print("Nome da Peça: "); //Inserir nome da peça
         nome = teclado.nextLine();       
-        peça.setNome(nome);               
+        peca.setNome(nome);               
                    
-        System.out.println("Qual o dia da apresentação da peça?"); //Inserir dia da peça
+        System.out.print("Dia de Apresentação: "); //Inserir dia da peça
         dia = teclado.nextInt();
-        peça.setDia(dia);
+        peca.setDia(dia);
         
-        System.out.println("Qual o mês da apresentação da peça?"); //Inserir mês da peça
+        System.out.print("Mês de Apresentação: "); //Inserir mês da peça
         mes = teclado.nextLine();
-        peça.setMes(mes);
+        peca.setMes(mes);
         
-        System.out.println("Qual o ano da apresentação da peça?"); //Inserir ano da peça
+        System.out.print("Ano de Apresentação: "); //Inserir ano da peça
         ano = teclado.nextInt();
-        peça.setAno(ano);
+        peca.setAno(ano);
 
-        System.out.println("Qual o local da apresentação da peça?"); //Inserir local de apresentação da peça
+        System.out.print("Local de Apresentação: "); //Inserir local de apresentação da peça
         local = teclado.nextLine();
-        peça.setLocal(local);
+        peca.setLocal(local);
         
-        try(FileWriter fw = new FileWriter("peças.txt", true);
+        try(FileWriter fw = new FileWriter("pecas.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
@@ -694,7 +771,7 @@ public class Inserir {
              System.out.println("erro");
          }
         System.out.println("Esta é a peça final:");
-        peça.status(); //Print do peça  final
+        peca.status(); //Print do peça  final
         
         
     }
